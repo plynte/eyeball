@@ -1,0 +1,479 @@
+{% extends "extends_base.html"%}
+{% block title %} ui_bottons {%endblock%}
+{% block css %}
+	<!-- BEGIN THEME STYLES -->
+	<link href="/static/css/style-metronic.css" rel="stylesheet" type="text/css"/>
+	<link href="/static/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="/static/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+	<link href="/static/css/plugins.css" rel="stylesheet" type="text/css"/>
+	<link href="/static/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+	<link href="/static/css/custom.css" rel="stylesheet" type="text/css"/>
+	<!-- END THEME STYLES -->
+{% endblock %}
+
+
+{% block tools %}
+    <li class="active">
+    <a href="javascript:;">
+    <i class="fa fa-cogs"></i>
+    <span class="title">tools</span>
+    <span class="arrow open"></span>
+    </a>
+    <ul class="sub-menu">
+        <li >
+            <a href="{% url 'ui_general.html' %}">
+            General</a>
+        </li>
+        <li class="active">
+            <a href="{% url 'ui_buttons.html' %}">
+            Buttons & Icons</a>
+        </li>
+        <li >
+            <a href="{% url 'ccs2_spider' %}">
+            <span class="badge badge-roundless badge-success">new</span>CCS2_Spider</a>
+        </li>
+        <li >
+            <a href="{% url 'mail' %}">
+            <span class="badge badge-roundless badge-warning">new</span>Mail</a>
+        </li>
+        <li >
+            <a href="{% url 'ccs2_spider' %}">
+            <span class="badge badge-roundless badge-important">new</span>CCS2_Spider</a>
+        </li>
+        <li >
+            <a href="{% url 'ccs2_spider' %}">
+            <span class="badge badge-roundless badge-important">new</span>CCS2_Spider</a>
+        </li>
+        <li >
+            <a href="{% url 'ccs2_spider' %}">
+            <span class="badge badge-roundless badge-important">new</span>CCS2_Spider</a>
+        </li>
+    </ul>
+</li>
+{% endblock %}
+
+{% block theme_layer %}
+<!--<div class="theme-panel hidden-xs hidden-sm">-->
+	<!--<div class="toggler"></div>-->
+	<!--<div class="toggler-close"></div>-->
+	<!--<div class="theme-options">-->
+		<!--<div class="theme-option theme-colors clearfix">-->
+			<!--<span>THEME COLOR</span>-->
+			<!--<ul>-->
+				<!--<li class="color-black current color-default" data-style="default"></li>-->
+				<!--<li class="color-blue" data-style="blue"></li>-->
+				<!--<li class="color-brown" data-style="brown"></li>-->
+				<!--<li class="color-purple" data-style="purple"></li>-->
+				<!--<li class="color-grey" data-style="grey"></li>-->
+				<!--<li class="color-white color-light" data-style="light"></li>-->
+			<!--</ul>-->
+		<!--</div>-->
+	<!--</div>-->
+<!--</div>-->
+{% endblock %}
+
+{% block content_row %}
+<!-- BEGIN PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <h3 class="page-title">
+            Buttons & Icons <small>buttons, icons, button dropdowns and more</small>
+        </h3>
+        <ul class="page-breadcrumb breadcrumb">
+            <li class="btn-group">
+                <button type="button" class="btn blue dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true">
+                <span>Actions</span> <i class="fa fa-angle-down"></i>
+                </button>
+                <ul class="dropdown-menu pull-right" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </li>
+            <li>
+                <i class="fa fa-home"></i>
+                <a href="{% url 'index'%}">Home</a>
+                <i class="fa fa-angle-right"></i>
+            </li>
+            <li>
+                <a href="#">UI Features</a>
+                <i class="fa fa-angle-right"></i>
+            </li>
+            <li><a href="#">Buttons & Icons</a></li>
+        </ul>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+<!-- BEGIN PAGE CONTENT-->
+<div class="row">
+    <div class="col-md-6">
+        <!-- BEGIN BUTTONS PORTLET-->
+        <div class="portlet box green ">
+            <div class="portlet-title">
+                <div class="caption"><i class="fa fa-reorder"></i>Buttons</div>
+                <div class="tools">
+                    <a href="javascript:;" class="collapse"></a>
+                    <a href="#portlet-config" data-toggle="modal" class="config"></a>
+                    <a href="javascript:;" class="reload"></a>
+                    <a href="javascript:;" class="remove"></a>
+                </div>
+            </div>
+            <div class="portlet-body util-btn-margin-bottom-5">
+                <div class="clearfix">
+                    <h4 class="block">Default Bootstrap Buttons(Customized to Match Theme Style)</h4>
+                    <!-- Standard gray button with gradient -->
+                    <button type="button" class="btn btn-default">Default</button>
+                    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                    <button type="button" class="btn btn-primary">Primary</button>
+                    <!-- Indicates a successful or positive action -->
+                    <button type="button" class="btn btn-success">Success</button>
+                    <!-- Contextual button for informational alert messages -->
+                    <button type="button" class="btn btn-info">Info</button>
+                    <!-- Indicates caution should be taken with this action -->
+                    <button type="button" class="btn btn-warning">Warning</button>
+                    <!-- Indicates a dangerous or potentially negative action -->
+                    <button type="button" class="btn btn-danger">Danger</button>
+                    <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+                    <button type="button" class="btn btn-link">Link</button>
+                </div>
+                <div class="clearfix">
+                    <h4 class="block">Metronic Style Buttons</h4>
+                    <button type="button" class="btn default">Default</button>
+                    <button type="button" class="btn red">Red</button>
+                    <button type="button" class="btn blue">Blue</button>
+                    <button type="button" class="btn green">Green</button>
+                    <button type="button" class="btn yellow">Yellow</button>
+                    <button type="button" class="btn purple">Purple</button>
+                    <button type="button" class="btn dark">Dark</button>
+                </div>
+                <div class="clearfix">
+                    <h4 class="block">Button Stripe</h4>
+                    <a href="#" class="btn default red-stripe">Red</a>
+                    <a href="#" class="btn default blue-stripe">Blue</a>
+                    <a href="#" class="btn default green-stripe">Green</a>
+                    <a href="#" class="btn default yellow-stripe">Yellow</a>
+                    <a href="#" class="btn default purple-stripe">Purple</a>
+                    <a href="#" class="btn default green-stripe">Green</a>
+                    <a href="#" class="btn default dark-stripe">Dark</a>
+                </div>
+                <div class="clearfix">
+                    <h4 class="block">Disabled</h4>
+                    <a href="#" class="btn default disabled">Default</a>
+                    <a href="#" class="btn red disabled">Red</a>
+                    <a href="#" class="btn blue disabled">Blue</a>
+                    <a href="#" class="btn green disabled">Green</a>
+                    <a href="#" class="btn yellow disabled">Yellow</a>
+                    <a href="#" class="btn purple disabled">Purple</a>
+                    <a href="#" class="btn dark disabled">Dark</a>
+                </div>
+                <div class="clearfix">
+                    <h4 class="block">Button Sizes</h4>
+                    <button type="button" class="btn default btn-lg">Large button</button>
+                    <button type="button" class="btn red">Default button</button>
+                    <button type="button" class="btn blue btn-sm">Small button</button>
+                    <button type="button" class="btn green btn-xs">Extra small button</button>
+                </div>
+                <div class="clearfix">
+                    <h4 class="block">Button Tags</h4>
+                    <a href="#" class="btn default">Link</a>
+                    <button class="btn default">Button</button>
+                    <input type="button" class="btn default" value="Input">
+                    <input type="submit" class="btn default" value="Submit">
+                </div>
+                <div class="clearfix">
+                    <h4 class="block">Block Buttons</h4>
+                    <a href="#" class="btn default btn-block">Link</a>
+                    <button class="btn blue btn-block">Button</button>
+                    <input type="button" class="btn red btn-block" value="Input">
+                    <input type="submit" class="btn purple btn-block" value="Submit">
+                </div>
+            </div>
+        </div>
+        <!-- END BUTTONS PORTLET-->
+
+        <!-- END BLOCK BUTTONS PORTLET-->
+    </div>
+    <div class="col-md-6">
+        <!-- BEGIN BLOCK BUTTONS PORTLET-->
+        <div class="portlet box yellow">
+            <div class="portlet-title">
+                <div class="caption"><i class="fa fa-reorder"></i>Button Groups</div>
+                <div class="tools">
+                    <a href="javascript:;" class="collapse"></a>
+                    <a href="#portlet-config" data-toggle="modal" class="config"></a>
+                    <a href="javascript:;" class="reload"></a>
+                    <a href="javascript:;" class="remove"></a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="clearfix">
+                    <h4 class="block">Basic Example</h4>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default">Left</button>
+                        <button type="button" class="btn btn-default">Middle</button>
+                        <button type="button" class="btn btn-default">Right</button>
+                    </div>
+                    <div class="btn-group btn-group-solid">
+                        <button type="button" class="btn red">Left</button>
+                        <button type="button" class="btn yellow">Middle</button>
+                        <button type="button" class="btn green">Right</button>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <h4 class="block">Button Toolbar</h4>
+                    <div class="btn-toolbar margin-bottom-10">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default">1</button>
+                            <button type="button" class="btn btn-default">2</button>
+                            <button type="button" class="btn btn-default">3</button>
+                            <button type="button" class="btn btn-default">4</button>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default">5</button>
+                            <button type="button" class="btn btn-default">6</button>
+                            <button type="button" class="btn btn-default">7</button>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default">8</button>
+                        </div>
+                    </div>
+                    <div class="btn-toolbar">
+                        <div class="btn-group btn-group-solid">
+                            <button type="button" class="btn red">1</button>
+                            <button type="button" class="btn green">2</button>
+                            <button type="button" class="btn blue">3</button>
+                            <button type="button" class="btn yellow">4</button>
+                        </div>
+                        <div class="btn-group btn-group-solid">
+                            <button type="button" class="btn purple">5</button>
+                            <button type="button" class="btn dark">6</button>
+                            <button type="button" class="btn default">7</button>
+                        </div>
+                        <div class="btn-group btn-group-solid">
+                            <button type="button" class="btn red">8</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <h4 class="block">Button Group Sizing</h4>
+                    <div class="btn-toolbar">
+                        <div class="btn-group btn-group-lg btn-group-solid margin-bottom-10">
+                            <button type="button" class="btn red">Left</button>
+                            <button type="button" class="btn green">Middle</button>
+                            <button type="button" class="btn blue">Right</button>
+                        </div>
+                    </div>
+                    <div class="btn-toolbar margin-bottom-10">
+                        <div class="btn-group btn-group-solid">
+                            <button type="button" class="btn red">Left</button>
+                            <button type="button" class="btn green">Middle</button>
+                            <button type="button" class="btn blue">Right</button>
+                        </div>
+                    </div>
+                    <div class="btn-toolbar margin-bottom-10">
+                        <div class="btn-group btn-group-sm btn-group-solid">
+                            <button type="button" class="btn red">Left</button>
+                            <button type="button" class="btn green">Middle</button>
+                            <button type="button" class="btn blue">Right</button>
+                        </div>
+                    </div>
+                    <div class="btn-toolbar margin-bottom-10">
+                        <div class="btn-group btn-group-xs btn-group-solid">
+                            <button type="button" class="btn red">Left</button>
+                            <button type="button" class="btn green">Middle</button>
+                            <button type="button" class="btn blue">Right</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <h4 class="block">Nesting Button Group</h4>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default"><i class="fa fa-user"></i> Profile</button>
+                        <button type="button" class="btn btn-default"><i class="fa fa-cogs"></i> Settings</button>
+                        <button type="button" class="btn btn-default"><i class="fa fa-bullhorn"></i> Feeds</button>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-ellipsis-horizontal"></i> More
+                            <i class="fa fa-angle-down"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Dropdown link</a></li>
+                                <li><a href="#">Dropdown link</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clearfix margin-bottom-10"></div>
+                    <div class="btn-group btn-group-solid">
+                        <button type="button" class="btn red"><i class="fa fa-user"></i> Profile</button>
+                        <button type="button" class="btn green"><i class="fa fa-cogs"></i> Settings</button>
+                        <button type="button" class="btn purple"><i class="fa fa-bullhorn"></i> Feeds</button>
+                        <div class="btn-group btn-group-solid">
+                            <button type="button" class="btn blue dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-ellipsis-horizontal"></i> More
+                            <i class="fa fa-angle-down"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Dropdown link</a></li>
+                                <li><a href="#">Dropdown link</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <h4 class="block">Vertical variation</h4>
+                    <div class="btn-group-vertical margin-right-10">
+                        <button type="button" class="btn btn-default">Button</button>
+                        <button type="button" class="btn btn-default">Button</button>
+                        <div class="btn-group">
+                            <button id="btnGroupVerticalDrop1" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            Dropdown
+                            <i class="fa fa-angle-down"></i>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop1">
+                                <li><a href="#">Dropdown link</a></li>
+                                <li><a href="#">Dropdown link</a></li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btn btn-default">Button</button>
+                        <button type="button" class="btn btn-default">Button</button>
+                        <div class="btn-group">
+                            <button id="btnGroupVerticalDrop2" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            Dropdown
+                            <i class="fa fa-angle-down"></i>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop2">
+                                <li><a href="#">Dropdown link</a></li>
+                                <li><a href="#">Dropdown link</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group">
+                            <button id="btnGroupVerticalDrop3" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            Dropdown
+                            <i class="fa fa-angle-down"></i>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop3">
+                                <li><a href="#">Dropdown link</a></li>
+                                <li><a href="#">Dropdown link</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group">
+                            <button id="btnGroupVerticalDrop4" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            Dropdown
+                            <i class="fa fa-angle-down"></i>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop4">
+                                <li><a href="#">Dropdown link</a></li>
+                                <li><a href="#">Dropdown link</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="btn-group-vertical btn-group-solid">
+                        <button type="button" class="btn blue">Button</button>
+                        <button type="button" class="btn green">Button</button>
+                        <div class="btn-group">
+                            <button id="btnGroupVerticalDrop5" type="button" class="btn yellow dropdown-toggle" data-toggle="dropdown">
+                            Dropdown
+                            <i class="fa fa-angle-down"></i>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop5">
+                                <li><a href="#">Dropdown link</a></li>
+                                <li><a href="#">Dropdown link</a></li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btn red">Button</button>
+                        <button type="button" class="btn dark">Button</button>
+                        <div class="btn-group">
+                            <button id="btnGroupVerticalDrop6" type="button" class="btn default dropdown-toggle" data-toggle="dropdown">
+                            Dropdown
+                            <i class="fa fa-angle-down"></i>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop6">
+                                <li><a href="#">Dropdown link</a></li>
+                                <li><a href="#">Dropdown link</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group">
+                            <button id="btnGroupVerticalDrop7" type="button" class="btn purple dropdown-toggle" data-toggle="dropdown">
+                            Dropdown
+                            <i class="fa fa-angle-down"></i>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop7">
+                                <li><a href="#">Dropdown link</a></li>
+                                <li><a href="#">Dropdown link</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group">
+                            <button id="btnGroupVerticalDrop8" type="button" class="btn yellow dropdown-toggle" data-toggle="dropdown">
+                            Dropdown
+                            <i class="fa fa-angle-down"></i>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop8">
+                                <li><a href="#">Dropdown link</a></li>
+                                <li><a href="#">Dropdown link</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <h4 class="block">Justified Link Variation</h4>
+                    <div class="btn-group btn-group-justified">
+                        <a href="#" class="btn btn-default">Left</a>
+                        <a href="#" class="btn btn-default">Middle</a>
+                        <a href="#" class="btn btn-default">Right</a>
+                    </div>
+                    <div class="clearfix margin-bottom-10"></div>
+                    <div class="btn-group btn-group btn-group-justified">
+                        <a href="#" class="btn red">Left</a>
+                        <a href="#" class="btn blue">Middle</a>
+                        <a href="#" class="btn green">Right</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END BLOCK BUTTONS PORTLET-->
+    </div>
+</div>
+{% endblock %}
+
+{% block js%}
+<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+<!-- BEGIN CORE PLUGINS -->
+<!--[if lt IE 9]>
+<script src="/static/plugins/respond.min.js"></script>
+<script src="/static/plugins/excanvas.min.js"></script>
+<![endif]-->
+<script src="/static/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="/static/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<!-- IMPORTANT! Load jquery-ui-1.10.3.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+<!--<script src="/static/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>      -->
+<script src="/static/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/static/plugins/bootstrap-hover-dropdown/twitter-bootstrap-hover-dropdown.min.js" type="text/javascript" ></script>
+<script src="/static/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="/static/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+<script src="/static/plugins/jquery.cookie.min.js" type="text/javascript"></script>
+<script src="/static/plugins/uniform/jquery.uniform.min.js" type="text/javascript" ></script>
+<!-- END CORE PLUGINS -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="/static/scripts/app.js"></script>
+<!-- END PAGE LEVEL SCRIPTS -->
+<script>
+    jQuery(document).ready(function() {
+        // initiate layout and plugins
+        App.init();
+
+        // button state demo
+        $('.demo-loading-btn')
+          .click(function () {
+            var btn = $(this)
+            btn.button('loading')
+            setTimeout(function () {
+              btn.button('reset')
+            }, 3000)
+        });
+    });
+</script>
+{% endblock %}

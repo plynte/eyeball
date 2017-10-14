@@ -1,0 +1,42 @@
+<!--在test.html文件夹下添加-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>websocket test</title>
+    </head>
+    <body>
+        <div id="messagecontainer" style="margin: 20px;"></div>
+    </body>
+    <script src="/static/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+
+    <script>
+
+        window.onbeforeunload = onbeforeunload_handler;
+        window.onunload = onunload_handler;
+
+        //var socket = new WebSocket('ws://192.168.200.135:8001/api/deployitems');
+        var socket = new WebSocket('ws://192.168.200.135:8008');
+        socket.onopen = function () {
+            console.log('WebSocket open');//成功连接上Websocket
+            //socket.send($('#backup_all').val());//发送数据到服务端
+        };
+        socket.onmessage = function (e) {
+                    console.log('message: ' + e.data);//打印服务端返回的数据
+{#                    alert(e.data);#}
+                    $('#messagecontainer').prepend('<p>' + e.data + '</p>');
+
+                };
+
+        socket.onclose = function () {
+            socket.close()
+        };
+        function onbeforeunload_handler(){
+            socket.close()
+         }
+
+         function onunload_handler(){
+             socket.close()
+        }
+
+    </script>
+</html>

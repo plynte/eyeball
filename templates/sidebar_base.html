@@ -1,0 +1,67 @@
+<div class="page-sidebar navbar-collapse collapse">
+			<!-- BEGIN SIDEBAR MENU -->
+	<ul class="page-sidebar-menu">
+		<li>
+			<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+			<div class="sidebar-toggler hidden-phone"></div>
+			<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+		</li>
+		{% block bookmarks %}
+		<li class="start ">
+			<a href="{% url 'index' %}">
+			<i class="fa fa-home"></i>
+			<span class="title">发布面板</span>
+			<span class=""></span>
+			</a>
+		</li>
+		{% endblock%}
+		{% block tools %}
+		<li class="">
+			<a href="javascript:;">
+			<i class="fa fa-cogs"></i>
+			<span class="title">发布管理</span>
+			<span class="arrow "></span>
+			</a>
+			<ul class="sub-menu">
+				<li >
+					<a href="{% url 'ui_general.html' %}">
+					General</a>
+				</li>
+				<li >
+					<a href="{% url 'ui_buttons.html' %}">
+					Buttons & Icons</a>
+				</li>
+				<li >
+					<a href="{% url 'ccs2_spider' %}">
+					<span class="badge badge-roundless badge-success">new</span>CCS2_Spider</a>
+				</li>
+                <li >
+					<a href="{% url 'mail' %}">
+					<span class="badge badge-roundless badge-warning">new</span>Mail</a>
+				</li>
+                <li >
+					<a href="{% url 'ccs2_spider' %}">
+					<span class="badge badge-roundless badge-important">new</span>CCS2_Spider</a>
+				</li>
+                <li >
+					<a href="{% url 'ccs2_spider' %}">
+					<span class="badge badge-roundless badge-important">new</span>CCS2_Spider</a>
+				</li>
+                <li >
+					<a href="{% url 'ccs2_spider' %}">
+					<span class="badge badge-roundless badge-important">new</span>CCS2_Spider</a>
+				</li>
+			</ul>
+		</li>
+        {% endblock %}
+        {% block charts %}
+		<li class="last ">
+			<a href="charts.html">
+			<i class="fa fa-bar-chart-o"></i>
+			<span class="title">Visual Charts</span>
+			</a>
+		</li>
+        {% endblock %}
+	</ul>
+	<!-- END SIDEBAR MENU -->
+</div>

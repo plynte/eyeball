@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!-- 
+Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.0.2
+Version: 1.5.4
+Author: KeenThemes
+Website: http://www.keenthemes.com/
+Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+-->
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+	<meta charset="utf-8" />
+	<title>{% block title%}{%endblock%}</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	<meta name="MobileOptimized" content="320">
+	<!-- BEGIN GLOBAL MANDATORY STYLES -->
+	<link href="/static/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/static/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/static/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+	<!-- END GLOBAL MANDATORY STYLES -->
+    <link rel="shortcut icon" href="/static/images/favicon.ico" />
+    {% block css%}
+
+    {% endblock %}
+
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body class="page-header-fixed">
+	<!-- BEGIN HEADER -->   
+	{% block page_header%} {% include "page_header.html" %} {% endblock %}
+	<!-- END HEADER -->
+	<div class="clearfix"></div>
+	<!-- BEGIN CONTAINER -->
+	<div class="page-container">
+		<!-- BEGIN SIDEBAR -->
+		{% block page_sidebar%}
+			<div class="page-sidebar navbar-collapse collapse">
+			<!-- BEGIN SIDEBAR MENU -->
+				<ul class="page-sidebar-menu">
+					<li>
+						<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+						<div class="sidebar-toggler hidden-phone"></div>
+						<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+					</li>
+
+					{% block bookmarks %}
+					<li class="start ">
+						<a href="{% url 'index' %}">
+						<i class="fa fa-home"></i>
+						<span class="title">Bookmarks</span>
+						<span class=""></span>
+						</a>
+					</li>
+					{% endblock%}
+
+					{% block tools %}
+					<li class="">
+						<a href="javascript:;">
+						<i class="fa fa-cogs"></i>
+						<span class="title">配置管理</span>
+						<span class="arrow "></span>
+						</a>
+						<ul class="sub-menu">
+							<li >
+								<a href="{#% url 'ui_general.html' %#}">
+								General</a>
+							</li>
+							<li >
+								<a href="{#% url 'ui_buttons.html' %#}">
+								Buttons & Icons</a>
+							</li>
+							<li >
+								<a href="{#% url 'ccs2_spider' %#}">
+								<span class="badge badge-roundless badge-success">new</span>CCS2_Spider</a>
+							</li>
+							<li >
+								<a href="{#% url 'mail' %#}">
+								<span class="badge badge-roundless badge-warning">new</span>Mail</a>
+							</li>
+							<li >
+								<a href="{#% url 'ccs2_spider' %#}">
+								<span class="badge badge-roundless badge-important">new</span>CCS2_Spider</a>
+							</li>
+							<li >
+								<a href="{#% url 'ccs2_spider' %#}">
+								<span class="badge badge-roundless badge-important">new</span>CCS2_Spider</a>
+							</li>
+							<li >
+								<a href="{#% url 'ccs2_spider' %#}">
+								<span class="badge badge-roundless badge-important">new</span>CCS2_Spider</a>
+							</li>
+						</ul>
+					</li>
+					{% endblock %}
+
+					{% block charts %}
+					<li class="last ">
+						<a href="charts.html">
+						<i class="fa fa-bar-chart-o"></i>
+						<span class="title">发布查询</span>
+						</a>
+					</li>
+					{% endblock %}
+				</ul>
+				<!-- END SIDEBAR MENU -->
+			</div>
+        {% endblock %}
+		<!-- END SIDEBAR -->
+		<!-- BEGIN PAGE -->
+
+		<div class="page-content">
+			<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+			<!-- BEGIN STYLE CUSTOMIZER -->
+
+            {% block theme_layer %}
+                {#% include 'theme.layer.html' %#}
+            {% endblock %}
+			<!-- END BEGIN STYLE CUSTOMIZER -->
+
+			{% block content_row %}
+
+            {% endblock %}
+		</div>
+		<!-- END PAGE -->
+	</div>
+	<!-- END CONTAINER -->
+	<!-- BEGIN FOOTER -->
+    {% block footer %} {% include "footer.html" %} {% endblock %}
+	<!-- END FOOTER -->
+
+    {% block js %}
+
+    {% endblock %}
+	<!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>

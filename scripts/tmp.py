@@ -1,0 +1,13 @@
+#! /usr/bin/env python
+# -*- coding:utf-8 -*-
+
+import time
+# m1 = "connect, role, uptime, version, max_connections, max_connect_errors, open_files_limit,table_open_cache, max_tmp_tables, max_heap_table_size, max_allowed_packet, open_files, open_tables, threads_connected,threads_running, threads_waits, threads_created, threads_cached, connections, aborted_clients, aborted_connects,connections_persecond, bytes_received_persecond, bytes_sent_persecond, com_select_persecond, com_insert_persecond,com_update_persecond, com_delete_persecond, com_commit_persecond, com_rollback_persecond, questions_persecond,queries_persecond, transaction_persecond, created_tmp_tables_persecond, created_tmp_disk_tables_persecond,created_tmp_files_persecond, table_locks_immediate_persecond, table_locks_waited_persecond, key_buffer_size,sort_buffer_size, join_buffer_size, key_blocks_not_flushed, key_blocks_unused, key_blocks_used,key_read_requests_persecond, key_reads_persecond, key_write_requests_persecond, key_writes_persecond, innodb_version,innodb_buffer_pool_instances, innodb_buffer_pool_size, innodb_doublewrite, innodb_file_per_table,innodb_flush_log_at_trx_commit, innodb_flush_method, innodb_force_recovery, innodb_io_capacity, innodb_read_io_threads,innodb_write_io_threads, innodb_buffer_pool_pages_total, innodb_buffer_pool_pages_data, innodb_buffer_pool_pages_dirty,innodb_buffer_pool_pages_flushed, innodb_buffer_pool_pages_free, innodb_buffer_pool_pages_misc, innodb_page_size,innodb_pages_created, innodb_pages_read, innodb_pages_written, innodb_row_lock_current_waits,innodb_buffer_pool_pages_flushed_persecond, innodb_buffer_pool_read_requests_persecond,innodb_buffer_pool_reads_persecond, innodb_buffer_pool_write_requests_persecond, innodb_rows_read_persecond,innodb_rows_inserted_persecond, innodb_rows_updated_persecond, innodb_rows_deleted_persecond, query_cache_hitrate,thread_cache_hitrate, key_buffer_read_rate, key_buffer_write_rate, key_blocks_used_rate, created_tmp_disk_tables_rate,connections_usage_rate, open_files_usage_rate, open_tables_usage_rate"
+# m2 = "server_id,tags,host,port,is_master,is_slave,gtid_mode,read_only,master_server,master_port,slave_io_run,slave_sql_run,delay,current_binlog_file,current_binlog_pos,master_binlog_file,master_binlog_pos,master_binlog_space"
+# output = {}
+# print "{"
+# for i in m2.split(','):
+#     print '"' + i.replace(' ','') + '":',i.replace(' ','') + ' ,'
+# print "}"
+
+print int(time.time())
